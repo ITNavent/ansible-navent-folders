@@ -1,0 +1,18 @@
+---
+
+galaxy_info:
+  author: mkfuri
+  description: A role to configure Navent Instance
+  version: 1.0.0
+  license: MIT
+  min_ansible_version: 1.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+
+  categories:
+    - configure
+
+dependencies: []

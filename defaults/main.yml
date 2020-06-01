@@ -1,0 +1,3 @@
+navent_home: /home/ubuntu/navent
+app_home: "{{navent_home}}/app"
+bin_home: "{{navent_home}}/bin"

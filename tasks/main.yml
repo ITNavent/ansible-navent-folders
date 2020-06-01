@@ -1,0 +1,24 @@
+---
+ 
+- name: Create Navent Directory
+  file: path="{{navent_home}}" state=directory
+- name: Create App Directory
+  file: path="{{app_home}}" state=directory
+- name: Create App Log Directory
+  file: path="{{app_home}}/logs" state=directory
+- name: Create App Backup Directory
+  file: path="{{app_home}}/bkp" state=directory
+- name: Create Bin Directory
+  file: path="{{bin_home}}" state=directory
+- name: Create JVM Directory
+  file: path="{{navent_home}}/jvm" state=directory
+- name: Create Supervisor Directory
+  file: path="{{navent_home}}/supervisor" state=directory
+- name: Create NewRelic Directory
+  file: path="{{navent_home}}/newrelic" state=directory
+- name: Create default app script
+  copy: src={{item}} dest="{{bin_home}}" mode=775 force=no
+  with_items:
+    - install.sh
+    - startup.sh
+    - shutdown.sh
